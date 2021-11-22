@@ -19,18 +19,25 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="二叉树.cpp" />
     <ClCompile Include="栈的基本操作及其应用.cpp" />
     <ClCompile Include="栈的基本操作及其应用2.cpp" />
     <ClCompile Include="自由存储区内存管理.cpp" />
     <ClCompile Include="自由存储区对象与构造函数.cpp" />
     <ClCompile Include="计算器.cpp" />
-    <ClCompile Include="链表与链表的基本操作.cpp" />
-    <ClCompile Include="链表与链表的基本操作2.cpp" />
+    <ClCompile Include="链表的基本操作.cpp" />
+    <ClCompile Include="链表的基本操作2.cpp" />
+    <ClCompile Include="队列的基本操作.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="binaryTree.h" />
+    <ClInclude Include="chainqueue.h" />
     <ClInclude Include="chainstack.h" />
+    <ClInclude Include="dbendQueue.h" />
     <ClInclude Include="dblist.h" />
     <ClInclude Include="list.h" />
+    <ClInclude Include="queue.h" />
     <ClInclude Include="stack.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

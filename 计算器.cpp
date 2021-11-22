@@ -150,7 +150,7 @@ template<typename T>  void calculator<T>::col(string& s)
 	cout << "结果为：" << result << endl;
 
 }
-int main()
+int main8()
 {
 	//分为俩步：1、解析表达式（数字和运算符分别各自入栈），2、计算，（出栈）
 	calculator<float> c1;
@@ -158,4 +158,5 @@ int main()
 	cout << "请输入运算表达式" << endl;
 	cin >> exp;
 	c1.col(exp);
+	return 0;
 }

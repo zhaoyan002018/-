@@ -73,6 +73,7 @@ void func7_5()
 
 }
 */
+/*
 void func7_6() {
 	const int h = 4;
 	int i, j;
@@ -114,7 +115,7 @@ void func7_6() {
 	list1.PrintList();
 
 }
-
+*/
 int main3()
 {
 	const int num = 5;
@@ -134,6 +135,6 @@ int main3()
 	l1.PrintList();
 */
 //func7_5();
-	func7_6();
+	//func7_6();
 	return 0;
 }

@@ -21,6 +21,7 @@ public:
 	void makeEmpty();
 	void traverse();
 
+	void stackFull();//栈满时，申请原容器的俩倍空间，将原数据放入新空间，再删除原数据所在空间。
 };
 
 template<typename T> stack<T>::stack()
@@ -54,7 +55,9 @@ template<typename T> stack<T>::~stack()
 template<typename T> bool stack<T>::push(const T& ele)
 {
 	if (isFull())
-		return false;
+	{
+		stackFull();
+	}
 
 	container[top++] = ele;
 
@@ -101,4 +104,21 @@ template<typename T> void stack<T>::traverse()
 		cout << container[t - 1] << endl;
 		t--;
 	}
+}
+
+template<typename T> void stack<T>::stackFull()
+{
+	//栈满时，申请原容器的俩倍空间，将原数据放入新空间，再删除原数据所在空间。
+	T* newContainer = new T[max * 2];
+	max = max * 2;
+
+	int t = top;
+	while (t)
+	{
+		newContainer[t - 1] = container[t - 1];
+		//container[t - 1]=0//对存放的数据进行释放，如果是基础类型则不用，如果是指针类型，其指向的空间需要特别处理。
+		t--;
+	}
+	delete[]container;
+	container = newContainer;
 }
